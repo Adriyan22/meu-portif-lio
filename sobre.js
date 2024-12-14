@@ -5,7 +5,7 @@ let btnAnterior = document.querySelector('.anterior')
 let btnProxima = document.querySelector('.proxima')
 
 container = document.createElement('img')
-container.src = './img/perfil.png'
+container.src = 'perfil.png'
 container.style.position = 'absolute'
 container.style.top = '0'
 container.style.marginTop = '1em'
