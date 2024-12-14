@@ -29,6 +29,11 @@ body {
     height: 30vh;
 }
 
+.perfil {
+    display: block;
+    margin: auto;
+}
+
 .btn {
     display: flex;
     justify-content: space-around;
