@@ -1,0 +1,388 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+html, body {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000a6;
+    position: relative;
+    overflow-x: hidden;
+}
+#cabecalho {
+    height: calc(100vh - 85vh);
+}
+#cabecalho .menu-icone {
+    width: 50px;
+    height: 50px;
+    background-color: #008b8b4a;
+    border-radius: 0 0 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.1s ease-in-out;
+}
+
+#cabecalho .menu-icone:active {
+    background-color: #008b8b;
+}
+
+#cabecalho .menu-icone .fa-bars {
+    color: #fff;
+    padding: 10px;
+}
+
+#cabecalho .nav-bar {
+    width: 100vw;
+    position: fixed;
+}
+
+#cabecalho .nav-bar .nav-lista {
+    height: calc(100vh - 85vh);
+    background-color: #0000004e;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#cabecalho .nav-bar .nav-lista li {
+    list-style-type: none;
+}
+
+#cabecalho .nav-bar .nav-lista li a {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+#cabecalho .nav-bar .nav-lista li .sobre {
+    transition: 2s linear;
+}
+
+#cabecalho .nav-bar .nav-lista li a:hover {
+    color: #008b8b;
+}
+
+
+/*conteúdo geral*/
+
+#conteiner .foto .perfil {
+    min-width: 40%;
+    max-width: 50%;
+    background-color: #000000ad;
+    box-shadow: 3px 3px 16px #ffffff27;
+    margin: 2em 10%;
+}
+
+#conteiner .descricao .sobre-mim {
+    font-size: 4em;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 2px 2px 8px #00000094;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+@media (max-width: 768px) {
+
+    #cabecalho .nav-bar .nav-lista {
+        display: none;
+    }
+
+    .menu-mobile {
+        height: 100vh;
+        background-color: #000000a3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        list-style-type: none;
+        animation: menu 1s ease-in-out ;
+    }
+
+    @keyframes menu {
+        0%{
+            position: relative;
+            left: -100%;
+            background-color: #0000007d;
+        }100%{
+            position: relative;
+            left: 0%;
+            background-color: #000000d4;
+        }
+    }
+
+    .menu-mobile a {
+        color: #ffffff;
+        font-size: 1.3em;
+        text-decoration: none;
+        transition:  0.1s ease;
+    }
+
+    .menu-mobile a:active {
+        border-radius: 10px;
+        padding: 5px;
+        background-color: #008b8b;
+        color: #fff;
+    }
+
+    /*conteudo geral*/
+    #conteiner .foto {
+        height: calc(85vh - 3vh);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #conteiner .foto .perfil {
+        min-width: 250px;
+        max-width: 280px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 16px #ffffff27;
+    }
+    
+    #conteiner .descricao .sobre-mim {
+        width: 100vw;
+        font-size: 2.3em;
+        font-weight: 500;
+        color: #fff;
+        text-shadow: 2px 2px 8px #00000094;
+    }
+
+    #conteiner .descricao .sobre-mim::after {
+        content: '';
+        max-width: 90%;
+        height: 2px;
+        background-color: #fff;
+        display: block;
+        margin: 0.3em auto;
+
+        animation: minwmaxw infinite 1s ;
+    }
+
+    @keyframes minwmaxw {
+        0%{
+            width: 0;
+            background-color: #fff;
+        }100%{
+            width: 90%;
+            background-color: #008b8b;
+        }
+    }
+
+    #conteiner .descricao p {
+        color: #fff;
+        font-size: 1.5em;
+        text-shadow: 2px 2px 8px #00000094;
+    }
+
+    #conteiner .descricao .linguagens {
+        width: 80%;
+        height: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+        padding: 1em 0 0 0;
+    }
+
+    #conteiner .descricao .linguagens .fa-brands {
+        color: #fff;
+        text-shadow: 2px 2px 8px #00000094;
+        transition: 0.3s ease-in;
+    }
+
+    #conteiner .descricao .linguagens .fa-html5:active {
+        color: #ff6d00;
+    }
+
+    #conteiner .descricao .linguagens .fa-css3-alt:active {
+        color: #0277BD;
+    }
+
+    #conteiner .descricao .linguagens .fa-js:active {
+        color: #ffd600;
+    }
+
+    #conteiner .descricao .mensagem {
+        font-size: 1.1em;
+        text-align: center;
+        padding: 15px 0 0 0;
+    } 
+
+    #rodape .redes-sociais {
+        height: calc(30vh - 15vh);
+        max-width: calc(100vw - 10vw);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style-type: none;
+        margin: auto;
+    }
+
+    #rodape .redes-sociais .fa-brands {
+        color: #fff;
+        text-shadow: 2px 2px 8px #00000094;
+    }
+
+    #rodape .redes-sociais .fa-whatsapp:active {
+        color: #008000;
+    }
+
+    #rodape .redes-sociais .fa-instagram:active {
+        color: #800080be;
+    }
+
+    #rodape .redes-sociais .fa-facebook:active {
+        color: #039BE5;
+    }
+
+    #rodape .redes-sociais .fa-linkedin:active {
+        color: #0288D1;
+    }
+
+    #rodape .redes-sociais .fa-github:active {
+        color: #455a64;
+    }
+}
+
+@media (min-width: 769px) {
+    #cabecalho .menu-icone {
+        display: none;
+    }
+
+    #conteiner {
+        height: calc(80vh - 30vh);
+    }
+
+    #conteiner .foto {
+        height: calc(100vh - 70vh);
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    #conteiner .foto .perfil {
+        min-width: 280px;
+        max-width: 300px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 16px #ffffff27;
+    }
+    
+    #conteiner .descricao .sobre-mim {
+        width: 95%;
+        font-size: 2.3em;
+        font-weight: 500;
+        color: #fff;
+        text-shadow: 2px 2px 8px #00000094;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    #conteiner .descricao .sobre-mim::after {
+        content: '';
+        max-width: 90%;
+        height: 2px;
+        background-color: #fff;
+        display: block;
+        margin: 0.3em auto;
+
+        animation: minwmaxw infinite 1s ;
+    }
+
+    @keyframes minwmaxw {
+        0%{
+            width: 0;
+            background-color: #fff;
+        }100%{
+            width: 90%;
+            background-color: #008b8b;
+        }
+    }
+
+    #conteiner .descricao p {
+        color: #fff;
+        font-size: 1.5em;
+        text-shadow: 2px 2px 8px #00000094;
+    }
+
+    #conteiner .descricao .linguagens {
+        width: 80%;
+        height: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+        padding: 1em 0 0 0;
+    }
+
+    #conteiner .descricao .linguagens .fa-brands {
+        color: #fff;
+        text-shadow: 2px 2px 8px #00000094;
+    }
+
+    #conteiner .descricao .linguagens .fa-html5:hover {
+        color: #ff6d00;
+    }
+
+    #conteiner .descricao .linguagens .fa-css3-alt:hover {
+        color: #0277BD;
+    }
+
+    #conteiner .descricao .linguagens .fa-js:hover {
+        color: #ffd600;
+    }
+
+    #conteiner .descricao .mensagem {
+        max-width: 95%;
+        font-size: 1.1em;
+        text-align: center;
+        padding: 15px 0 0 0;
+    } 
+
+    #rodape .redes-sociais {
+        height: calc(90vh / 2);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: end;
+        list-style-type: none;
+    }
+
+    #rodape .redes-sociais .fa-brands {
+        color: #fff;
+        text-shadow: 2px 2px 8px #00000094;
+    }
+
+    #rodape .redes-sociais .fa-whatsapp:active {
+        color: #008000;
+    }
+
+    #rodape .redes-sociais .fa-instagram:active {
+        color: #800080be;
+    }
+
+    #rodape .redes-sociais .fa-facebook:active {
+        color: #039BE5;
+    }
+
+    #rodape .redes-sociais .fa-linkedin:active {
+        color: #0288D1;
+    }
+
+    #rodape .redes-sociais .fa-github:active {
+        color: #455a64;
+        background-color: #ffffff5d;
+    }   
+}

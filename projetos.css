@@ -1,0 +1,111 @@
+body {
+    background-color: #000000b0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.icon a:nth-child(1) {
+    color: #ffffff9d;
+}
+
+.icon a:nth-child(1):active {
+    color: #fff;
+}
+
+.text-center {
+    color: #ffffff71;
+    font-weight: 400;
+    font-size: 2.5em;
+    font-style: italic;
+    text-shadow: 1px 1px 3px #ffffff51;
+}
+
+.container-md {
+    border-radius: 10px;
+    background-color: #696969;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-sm ul li {
+    list-style-type: none;
+}
+
+.container-sm ul li a {
+    color: #ffffff9d;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.container-sm ul li a:hover {
+    background-color: #fff;
+    color: #696969;
+    border-radius: 10px;
+    font-style: italic;
+    padding: 5px;
+}
+
+.container-sm ul li p {
+    color: #ffffff9d;
+    font-style: italic;
+}
+
+.container-sm ul li p .fa-sharp {
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.rodape .botoes {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rodape .botoes a button {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.rodape .botoes a button:active {
+    background-color: #696969;
+    color: #fff;
+}
+
+.fa-whatsapp {
+    color: #008000;
+    position: fixed;
+    bottom: 50px;
+    left: 20px;
+}
+
+@media (min-width: 768px) {
+
+    .text-center {
+        font-size: 4em;
+    }
+
+    .container-sm ul li a {
+        font-size: 1.5em;
+    }
+
+    .rodape .botoes a button {
+        padding: 5px 25px;
+    }
+}
+
